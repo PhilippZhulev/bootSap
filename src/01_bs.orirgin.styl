@@ -1,2 +1,27 @@
-.hellow
-  width: 10px
+// adaptive grid layout
+.greed_panel
+  display: grid
+  > div
+    height: 100%
+    position: relative
+  for resolution in (2000px 1030px 800px 600px)
+      if resolution == 2000px
+        @media all and (max-width: resolution)
+          for num in (5 10 15 20 25 30 35 40 45)
+            &.lg_gap_{num}
+                grid-gap: (num)px
+      if resolution == 1030px
+        @media all and (max-width: resolution)
+          for num in (5 10 15 20 25 30 35 40 45)
+            &.md_gap_{num}
+              grid-gap: (num)px
+      if resolution == 800px
+        @media all and (max-width: resolution)
+          for num in (5 10 15 20 25 30 35 40 45)
+            &.sm_gap_{num}
+              grid-gap: (num)px
+      if resolution == 600px
+        @media all and (max-width: resolution)
+          for num in (5 10 15 20 25 30 35 40 45)
+            &.xs_gap_{num}
+              grid-gap: (num)px
