@@ -1,0 +1,14 @@
+html, body {
+    height: 100%;
+}
+
+.panel1 {
+    height: calc(100% - 60px);
+    padding: 30px;
+}
+.panel {
+    background: grey;
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+}

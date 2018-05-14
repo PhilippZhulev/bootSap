@@ -1,4 +1,14 @@
 // adaptive grid layout
+
+media_arrs(sizeName, res)
+  @media all and (max-width: res)
+    for num in (1 2 3 4 5 6 7 8)
+      &.{sizeName}_col_{num}
+        grid-template-columns: repeat(num, auto)
+    for num in (5 10 15 20 25 30 35 40 45)
+      &.{sizeName}_gap_{num}
+        grid-gap: (num)px
+
 .greed_panel
   display: grid
   > div
@@ -6,22 +16,10 @@
     position: relative
   for resolution in (2000px 1030px 800px 600px)
       if resolution == 2000px
-        @media all and (max-width: resolution)
-          for num in (5 10 15 20 25 30 35 40 45)
-            &.lg_gap_{num}
-                grid-gap: (num)px
+        media_arrs(lg, resolution)
       if resolution == 1030px
-        @media all and (max-width: resolution)
-          for num in (5 10 15 20 25 30 35 40 45)
-            &.md_gap_{num}
-              grid-gap: (num)px
+        media_arrs(md, resolution)
       if resolution == 800px
-        @media all and (max-width: resolution)
-          for num in (5 10 15 20 25 30 35 40 45)
-            &.sm_gap_{num}
-              grid-gap: (num)px
+        media_arrs(sm, resolution)
       if resolution == 600px
-        @media all and (max-width: resolution)
-          for num in (5 10 15 20 25 30 35 40 45)
-            &.xs_gap_{num}
-              grid-gap: (num)px
+        media_arrs(xs, resolution)
