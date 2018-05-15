@@ -369,3 +369,17 @@
     grid-gap: 45px;
   }
 }
+
+.inline_text {
+  position: relative;
+  height: auto !important;
+}
+.inline_text > div,
+.inline_text > div span {
+  position: relative;
+  display: inline;
+}
+.inline_text > div span {
+  height: auto !important;
+  width: auto !important;
+}
