@@ -2,7 +2,7 @@
 
 media_arrs(sizeName, res)
   @media all and (max-width: res)
-    for num in (1 2 3 4 5 6 7 8)
+    for num in (1 2 3 4 5 6 7 8 9 10 11 12)
       &.{sizeName}_col_{num}
         grid-template-columns: repeat(num, auto)
     for num in (1 2 3 4 5 6 7 8)
@@ -16,7 +16,14 @@ media_arrs(sizeName, res)
   display: grid
   > div
     height: 100%
+    top: 0!important
+    bottom: 0!important
+    left: 0!important
+    right: 0!important
     position: relative
+    > div
+      width 100%!important
+      height 100%!important
   for resolution in (2000px 1030px 800px 600px)
       if resolution == 2000px
         media_arrs(lg, resolution)

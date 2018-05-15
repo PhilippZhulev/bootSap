@@ -3,7 +3,15 @@
 }
 .grid_panel > div {
   height: 100%;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
   position: relative;
+}
+.grid_panel > div > div {
+  width: 100% !important;
+  height: 100% !important;
 }
 @media all and (max-width: 2000px) {
   .grid_panel.lg_col_1 {
@@ -29,6 +37,18 @@
   }
   .grid_panel.lg_col_8 {
     grid-template-columns: repeat(8, auto);
+  }
+  .grid_panel.lg_col_9 {
+    grid-template-columns: repeat(9, auto);
+  }
+  .grid_panel.lg_col_10 {
+    grid-template-columns: repeat(10, auto);
+  }
+  .grid_panel.lg_col_11 {
+    grid-template-columns: repeat(11, auto);
+  }
+  .grid_panel.lg_col_12 {
+    grid-template-columns: repeat(12, auto);
   }
   .grid_panel.lg_rows_1 {
     grid-template-rows: repeat(1, auto);
@@ -107,6 +127,18 @@
   .grid_panel.md_col_8 {
     grid-template-columns: repeat(8, auto);
   }
+  .grid_panel.md_col_9 {
+    grid-template-columns: repeat(9, auto);
+  }
+  .grid_panel.md_col_10 {
+    grid-template-columns: repeat(10, auto);
+  }
+  .grid_panel.md_col_11 {
+    grid-template-columns: repeat(11, auto);
+  }
+  .grid_panel.md_col_12 {
+    grid-template-columns: repeat(12, auto);
+  }
   .grid_panel.md_rows_1 {
     grid-template-rows: repeat(1, auto);
   }
@@ -184,6 +216,18 @@
   .grid_panel.sm_col_8 {
     grid-template-columns: repeat(8, auto);
   }
+  .grid_panel.sm_col_9 {
+    grid-template-columns: repeat(9, auto);
+  }
+  .grid_panel.sm_col_10 {
+    grid-template-columns: repeat(10, auto);
+  }
+  .grid_panel.sm_col_11 {
+    grid-template-columns: repeat(11, auto);
+  }
+  .grid_panel.sm_col_12 {
+    grid-template-columns: repeat(12, auto);
+  }
   .grid_panel.sm_rows_1 {
     grid-template-rows: repeat(1, auto);
   }
@@ -260,6 +304,18 @@
   }
   .grid_panel.xs_col_8 {
     grid-template-columns: repeat(8, auto);
+  }
+  .grid_panel.xs_col_9 {
+    grid-template-columns: repeat(9, auto);
+  }
+  .grid_panel.xs_col_10 {
+    grid-template-columns: repeat(10, auto);
+  }
+  .grid_panel.xs_col_11 {
+    grid-template-columns: repeat(11, auto);
+  }
+  .grid_panel.xs_col_12 {
+    grid-template-columns: repeat(12, auto);
   }
   .grid_panel.xs_rows_1 {
     grid-template-rows: repeat(1, auto);
